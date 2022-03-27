@@ -317,7 +317,7 @@ services:
       - database
     environment: *default-service-database-env
 
-  tasks.ray-head:
+  ray-head:
     image: simpled:0.1
     shm_size: '2gb'
     entrypoint: [ '/usr/local/bin/ray']
