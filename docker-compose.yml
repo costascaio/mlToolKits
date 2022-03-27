@@ -363,7 +363,7 @@ services:
         protocol: tcp
         mode: host
     depends_on:
-      - "tasks.ray-head"
+      - "ray-head"
     deploy:
       mode: global
       placement:
