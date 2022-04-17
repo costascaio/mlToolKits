@@ -1,0 +1,6 @@
+cluster_name: minimal
+
+# Cloud-provider specific configuration.
+provider:
+    type: gcp
+    region: southamerica-east1

@@ -1,4 +1,4 @@
-FROM python:2.7-slim
+FROM python:3.7-slim
 
 WORKDIR /usr/src/ray
 COPY . /usr/src/ray
@@ -16,4 +16,4 @@ RUN pip install psutil
 
 RUN pip install -U "ray[default]" google-api-python-client
 
-CMD ["python", "script.py"]
+CMD ["ray up -y config.yaml && ray submit config.yaml script.py"]
