@@ -12,7 +12,8 @@ RUN apt-get install -y --fix-missing \
     telnet \
     procps \
     && apt-get clean && rm -rf /tmp/* /var/tmp/*
-    
-RUN pip install ray
+RUN pip install psutil
+
+RUN pip install -U "ray[default]" google-api-python-client
 
 CMD ["python", "script.py"]
