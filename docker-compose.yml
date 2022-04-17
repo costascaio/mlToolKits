@@ -368,6 +368,16 @@ services:
       mode: global
       placement:
         constraints: [node.labels.Head != true]
+  
+  ray-application:
+    image: ray_application
+    deploy:
+      placement:
+        constraints:
+          - "node.role==worker"
+        replicas: 2
+    ports:
+      - "4445:4445"
 
 networks:
   database:
